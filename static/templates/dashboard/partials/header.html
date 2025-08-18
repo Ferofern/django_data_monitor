@@ -38,6 +38,11 @@
 
             <!-- Profile menu -->
             <li class="relative">
+
+                {% if user.is_authenticated %}
+                    <span class="mr-2 text-gray-700 dark:text-gray-300 font-medium">{{ user.username }}</span>
+                {% endif %}
+
                 <button class="align-middle rounded-full focus:shadow-outline-purple focus:outline-none"
                     @click="toggleProfileMenu" @keydown.escape="closeProfileMenu" aria-label="Account"
                     aria-haspopup="true">
