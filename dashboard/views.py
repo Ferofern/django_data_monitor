@@ -1,16 +1,13 @@
 from django.http import HttpResponse
-from django.shortcuts import render  # Esto es necesario
-from django.http import HttpResponse
+from django.shortcuts import render
 import requests
 from django.conf import settings
+from django.contrib.auth.decorators import login_required
 
-import requests
-from django.conf import settings
-
+@login_required
 def index(request):
-
-    response = requests.get(settings.API_URL)  # URL de la API
-    posts = response.json()  # Convertir la respuesta a JSON
+    response = requests.get(settings.API_URL)  
+    posts = response.json()
 
     # Número total de respuestas
     total_responses = len(posts)
