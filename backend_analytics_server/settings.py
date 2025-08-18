@@ -23,8 +23,8 @@ CSRF_TRUSTED_ORIGINS = [
 ALLOWED_HOSTS = ["*"]
 
 # URL de login para @login_required
-LOGIN_URL = 'https://ubiquitous-space-spork-7vrppw9gwq7pcvqp-8000.app.github.dev/admin/login/'
-LOGIN_REDIRECT_URL = 'https://ubiquitous-space-spork-7vrppw9gwq7pcvqp-8000.app.github.dev/'            # Página a la que va tras login
+LOGIN_URL = '/login/'
+LOGIN_REDIRECT_URL = '/'
 
 # Application definition
 INSTALLED_APPS = [
