@@ -64,6 +64,7 @@ TEMPLATES = [
     },
 ]
 
+
 WSGI_APPLICATION = "backend_analytics_server.wsgi.application"
 
 # Database
