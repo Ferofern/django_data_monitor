@@ -1,9 +1,11 @@
 from django.shortcuts import render, redirect
 import requests
 from django.conf import settings
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required, permission_required
 
 @login_required
+@permission_required('dashboard.index_viewer', raise_exception=True)
+
 def index(request):
     # Verifica si el usuario está autenticado
     if not request.user.is_authenticated:
